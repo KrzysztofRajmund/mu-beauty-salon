@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&family=Poppins:wght@200&display=swap");
+.footer {
+  width: 100vw;
+  height: 100vh;
+  background-color: #f0f7f2;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer article {
+  text-align: center;
+  margin-top: 6rem;
+}
+
+.footer-top img {
+  width: 150px;
+  height: auto;
+  opacity: 0.6;
+}
+
+.footer-middle {
+  color: #919191;
+}
+
+.footer-bottom {
+  text-align: center;
+  cursor: pointer;
+}
+
+.footer-bottom img {
+  width: auto;
+  height: 50px;
+}
+
+.footer-bottom h4 {
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: 0.1rem;
+  color: #919191;
+}
+
+.footer-bottom-arrow {
+  width: 2rem;
+  height: 2rem;
+  border: 0.3rem solid #fff;
+  border-bottom: none;
+  border-right: none;
+  -webkit-animation: arrow-jump 1.5s infinite;
+          animation: arrow-jump 1.5s infinite;
+}
+
+@-webkit-keyframes arrow-jump {
+  0% {
+    -webkit-transform: translateY(-2.5rem) rotate(45deg);
+            transform: translateY(-2.5rem) rotate(45deg);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0.5rem) rotate(45deg);
+            transform: translateY(0.5rem) rotate(45deg);
+    opacity: 0.9;
+  }
+}
+
+@keyframes arrow-jump {
+  0% {
+    -webkit-transform: translateY(-2.5rem) rotate(45deg);
+            transform: translateY(-2.5rem) rotate(45deg);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0.5rem) rotate(45deg);
+            transform: translateY(0.5rem) rotate(45deg);
+    opacity: 0.9;
+  }
+}
+/*# sourceMappingURL=main.css.map */
