@@ -1,6 +1,6 @@
 import React from 'react';
 //assets
-// import Logo2 from "../../assets/logo2.png"
+import LogoBlack from "../../assets/logo-black.png"
 
 const FooterBar: React.FC = () => {
 
@@ -14,7 +14,7 @@ const FooterBar: React.FC = () => {
     return (
         <section className="footer">
             <article className="footer-top">
-                <img src="logo" alt="logo" />
+                <img src={LogoBlack} alt="logo" />
             </article>
             <article className="footer-middle">
                 <h5>Copyrights 2021. Created by RajmundTech</h5>

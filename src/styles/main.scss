@@ -4,6 +4,398 @@
 @import 'variables';
 @import 'functions';
 
+* {
+  box-sizing: border-box;
+  font-family: $familyFont;
+}
+
+html {
+  font-size: 62.5%; //1rem = 10px, 1.6rem = 16px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+//scrollbar
+/* width */
+::-webkit-scrollbar {
+  width: 2rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: pink;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: pink;
+}
+
+//topnavbar
+.topnav-container {
+  background-color: $whiteBackground;
+  z-index: 10;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  min-height: 80px;
+  padding-left: 4rem;
+  padding-right: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: $subtitleFontSize;
+  letter-spacing: 0.2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  box-shadow: 5px 10px 18px rgba(0, 0, 0, 0.143);
+}
+
+.topnav-logo {
+  flex: 15%;
+  text-align: left;
+  margin-left: 2.5rem;
+  img {
+    margin: 0.5rem;
+    width: 12rem;
+    height: auto;
+    transition: 0.4s ease-out;
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+}
+
+.topnav-menu {
+  flex: 70%;
+  text-align: center;
+  a {
+    color: $blackFontColor;
+    padding: 0 2.5rem 0 2.5rem;
+    background: linear-gradient(
+      60deg,
+      $supplementaryFontColor 50%,
+      $whiteBackground 50%
+    );
+    background-size: 250%;
+    background-position: right;
+    transition: 0.4s ease-out;
+    &:hover {
+      background-position: left;
+      color: $whiteFontColor;
+      text-decoration: none;
+    }
+  }
+}
+
+.topnav-socialmedia {
+  flex: 15%;
+  text-align: right;
+  margin-right: 2.5rem;
+  img {
+    margin-left: 2rem;
+    width: 2.5rem;
+    height: auto;
+    opacity: 0.3;
+    transition: 0.4s ease-out;
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+//nav-icon
+.nav-icon {
+  display: none;
+  z-index: 95;
+  position: absolute;
+  right: 5%;
+  cursor: pointer;
+}
+
+.nav-icon__btn {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+  background-color: transparent;
+  width: 4.5rem;
+  cursor: pointer;
+}
+
+.nav-icon__span {
+  z-index: 95;
+  display: block;
+  background: $blackFontColor;
+  transition: all 0.3s;
+  position: relative;
+  margin-top: 8px;
+  height: 2px;
+  float: right;
+}
+.nav-icon__span-first {
+  width: 80%;
+}
+
+.nav-icon__span-second {
+  width: 60%;
+}
+
+.nav-icon__span-third {
+  width: 90%;
+}
+
+.active span:nth-child(1) {
+  animation: ease 0.7s top forwards;
+}
+
+.not-active span:nth-child(1) {
+  animation: ease 0.7s top-2 forwards;
+}
+
+.active span:nth-child(2) {
+  animation: ease 0.7s scaled forwards;
+}
+
+.not-active span:nth-child(2) {
+  animation: ease 0.7s scaled-2 forwards;
+}
+
+.active span:nth-child(3) {
+  animation: ease 0.7s bottom forwards;
+}
+
+.not-active span:nth-child(3) {
+  animation: ease 0.7s bottom-2 forwards;
+}
+
+//modal nav
+
+.modalNav {
+  transition: all 0.3s linear;
+  font-size: $subtitleFontSize;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  animation: nav-animation 0.5s ease-in-out;
+  .modal-logo {
+    flex: 100%;
+    margin: 3rem 0.2rem;
+    display: flex;
+    align-items: center;
+    img {
+      margin: 0.5rem;
+      width: 18rem;
+      height: auto;
+      transition: 0.4s ease-out;
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+  }
+
+  .modal-menu {
+    flex: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    a {
+      margin: 1.2rem 0;
+      color: $blackFontColor;
+      padding: 0 2.5rem 0 2.5rem;
+      background: linear-gradient(
+        60deg,
+        $supplementaryFontColor 50%,
+        $whiteBackground 50%
+      );
+      background-size: 250%;
+      background-position: right;
+      transition: 0.4s ease-out;
+      &:hover {
+        background-position: left;
+        color: $whiteFontColor;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .modal-socialmedia {
+    flex: 100%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    a {
+      text-align: center;
+      img {
+        margin: 3rem 1rem;
+        width: 3.5rem;
+        height: auto;
+        opacity: 0.3;
+        transition: 0.4s ease-out;
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+//nav animation - modal appearance
+
+@keyframes nav-animation {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes top {
+  0% {
+    top: 0;
+    transform: rotate(0);
+  }
+  50% {
+    top: 1px;
+    transform: rotate(0);
+  }
+  100% {
+    top: 1px;
+    transform: rotate(45deg);
+  }
+}
+
+@keyframes top-2 {
+  0% {
+    top: 22px;
+    transform: rotate(45deg);
+  }
+  50% {
+    top: 22px;
+    transform: rotate(0deg);
+  }
+  100% {
+    top: 0;
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes bottom {
+  0% {
+    width: 90%;
+    bottom: 0;
+    transform: rotate(0);
+  }
+  50% {
+    bottom: 19px;
+    transform: rotate(0);
+  }
+  100% {
+    width: 80%;
+    bottom: 19px;
+    transform: rotate(135deg);
+  }
+}
+
+@keyframes bottom-2 {
+  0% {
+    bottom: 22px;
+    transform: rotate(135deg);
+  }
+  50% {
+    bottom: 22px;
+    transform: rotate(0);
+  }
+  100% {
+    bottom: 0;
+    transform: rotate(0);
+  }
+}
+
+@keyframes scaled {
+  50% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+
+@keyframes scaled-2 {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+//home-jumbotron
+.carousel {
+  margin-top: -18rem;
+  .carousel-item {
+    .carousel-caption {
+      margin: 0 auto;
+      margin-bottom: 25%;
+      width: 30%;
+      height: 7rem;
+      padding: 1.5rem;
+      text-transform: uppercase;
+      background-color: rgba(255, 255, 255, 0.204);
+      h1 {
+        margin: 0;
+        padding: 0.5rem 0 0 0;
+      }
+    }
+  }
+
+  .carousel-indicators {
+    margin-bottom: 18%;
+    li {
+      height: 1rem;
+      width: 4rem;
+      background-color: pink;
+      padding: 0;
+      border-bottom: 0.1rem solid $whiteBackground;
+    }
+  }
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 10%;
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+      background-color: pink;
+      width: 80%;
+      height: 10rem;
+      background-size: 3rem;
+    }
+  }
+}
+
 //footer
 .footer {
   width: 100vw;
@@ -22,7 +414,7 @@
 
 .footer-top {
   img {
-    width: 150px;
+    width: 250px;
     height: auto;
     opacity: 0.6;
   }
@@ -35,10 +427,6 @@
 .footer-bottom {
   text-align: center;
   cursor: pointer;
-  img {
-    width: auto;
-    height: 50px;
-  }
 
   h4 {
     text-transform: uppercase;
@@ -51,7 +439,7 @@
 .footer-bottom-arrow {
   width: 2rem;
   height: 2rem;
-  border: 0.3rem solid $whiteFontColor;
+  border: 0.3rem solid $subcontentFontColor;
   border-bottom: none;
   border-right: none;
   animation: arrow-jump 1.5s infinite;
@@ -66,5 +454,30 @@
   100% {
     transform: translateY(0.5rem) rotate(45deg);
     opacity: 0.9;
+  }
+}
+
+//MEDIA!!!
+@media screen and (max-width: 940px) {
+  .topnav-container {
+    font-size: $subtitleFontSize * 3/4;
+  }
+}
+
+@media screen and (max-width: 825px) {
+  .topnav-logo {
+    margin-left: 0;
+  }
+  .topnav-menu {
+    display: none;
+  }
+  .topnav-socialmedia {
+    display: none;
+  }
+  //nav-icon
+  .nav-icon {
+    display: block;
+    top: 0%;
+    transform: translateY(90%);
   }
 }
