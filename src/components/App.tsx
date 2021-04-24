@@ -9,6 +9,7 @@ import {
 import TopNavBar from "./TopNavBar/TopNavBar";
 import FooterBar from "./FooterBar/FooterBar";
 import HomeJumbotron from './HomeJumbotron/HomeJumbotron';
+import HomeOffer from './Offer/HomeOffer';
 const App: React.FC = () => {
   return (
     <Router>
@@ -16,6 +17,7 @@ const App: React.FC = () => {
       <Switch>
         <Route path="/">
           <HomeJumbotron />
+          <HomeOffer />
         </Route>
       </Switch>
       <FooterBar />
