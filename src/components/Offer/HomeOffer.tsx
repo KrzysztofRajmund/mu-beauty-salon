@@ -1,17 +1,19 @@
 import React, { useState } from 'react'
-import { makeStyles } from '@material-ui/core/styles';
+import { createMuiTheme, makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
+import Grid from '@material-ui/core/Grid';
+
 
 
 const useStyles = makeStyles((theme) => ({
     root: {
         display: 'flex',
-        justifyContent: "space-evenly",
+        justifyContent: "center",
         alignItems: "center",
         flexWrap: 'wrap',
         height: "90vh",
         '& > *': {
-            margin: theme.spacing(2),
+            margin: theme.spacing(5),
             width: theme.spacing(28),
             height: theme.spacing(28),
         },
@@ -20,9 +22,7 @@ const useStyles = makeStyles((theme) => ({
         "&:hover": {
             backgroundColor: "purple"
         },
-        outlined: {
-            display: "none",
-        }
+
     }
 }));
 
@@ -31,12 +31,18 @@ const HomeOffer: React.FC = () => {
     const [shadow, setShadow] = useState<any>("outlined")
 
     return (
-        <div className={classes.root}>
+        <Grid container className={classes.root} spacing={2}>
+            <Grid item sm={12} md={6} lg={3} >
+                <Paper elevation={3} className={classes.paperCard} />
+            </Grid>
+            <Grid item sm={12} md={6} lg={3} >
+                <Paper elevation={3} className={classes.paperCard} />
+            </Grid>
+            <Grid item sm={12} md={6} lg={3} >
+                <Paper elevation={3} className={classes.paperCard} />
+            </Grid>
 
-            <Paper variant={shadow} elevation={3} className={classes.paperCard} onMouseOver={(e) => console.log(e.target)} />
-            <Paper variant={shadow} elevation={3} className={classes.paperCard} />
-            <Paper variant={shadow} elevation={3} className={classes.paperCard} />
-        </div>
+        </Grid>
     );
 }
 
