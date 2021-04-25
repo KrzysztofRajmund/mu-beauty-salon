@@ -7,6 +7,8 @@ import Avatar from '@material-ui/core/Avatar';
 import Hand from "../../assets/hand.png";
 import Legs from "../../assets/legs.png";
 import Face from "../../assets/face.png";
+//router
+import { Link } from "react-router-dom";
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -34,6 +36,13 @@ const useStyles = makeStyles((theme: Theme) =>
                 height: "100%",
             },
         },
+
+        link: {
+            " &:focus, &:hover, &:visited, &:link, &:active": {
+                textDecoration: "none",
+            }
+
+        },
         paperCard: {
             display: "flex",
             flexDirection: "column",
@@ -41,7 +50,6 @@ const useStyles = makeStyles((theme: Theme) =>
             alignItems: "center",
             transition: "all 3s easy-in-out",
             border: "2px solid #f0f7f2",
-
         },
         avatar: {
             height: "10rem",
@@ -78,30 +86,31 @@ const HomeOffer: React.FC = () => {
     return (
         <div className={classes.root}>
 
-            <Paper variant={shadowFirst} elevation={6} className={classes.paperCard} onMouseEnter={() => shadowFunc("elevation", "first")} onMouseLeave={() => shadowFunc("outlined", "first")} >
-                <Avatar variant="square" alt="image" src={Face} className={classes.avatar} />
-                <Typography className={classes.title} color="textSecondary" gutterBottom>
-                    Zabiegi na twarz / Makijaż
+            <Link to="/uslugi" className={classes.link}>
+                <Paper variant={shadowFirst} elevation={6} className={classes.paperCard} onMouseEnter={() => shadowFunc("elevation", "first")} onMouseLeave={() => shadowFunc("outlined", "first")} >
+                    <Avatar variant="square" alt="image" src={Face} className={classes.avatar} />
+                    <Typography className={classes.title} color="textSecondary" gutterBottom>
+                        Zabiegi na twarz / Makijaż
         </Typography>
 
-            </Paper>
-
-
-            <Paper variant={shadowSecond} elevation={6} className={classes.paperCard} onMouseEnter={() => shadowFunc("elevation", "second")} onMouseLeave={() => shadowFunc("outlined", "second")}>
-                <Avatar variant="square" alt="image" src={Legs} className={classes.avatar} />
-                <Typography className={classes.title} color="textSecondary" gutterBottom>
-                    Depilacja
+                </Paper>
+            </Link>
+            <Link to="/uslugi" className={classes.link}>
+                <Paper variant={shadowSecond} elevation={6} className={classes.paperCard} onMouseEnter={() => shadowFunc("elevation", "second")} onMouseLeave={() => shadowFunc("outlined", "second")}>
+                    <Avatar variant="square" alt="image" src={Legs} className={classes.avatar} />
+                    <Typography className={classes.title} color="textSecondary" gutterBottom>
+                        Depilacja
         </Typography>
-            </Paper>
-
-
-            <Paper variant={shadowThird} elevation={6} className={classes.paperCard} onMouseEnter={() => shadowFunc("elevation", "third")} onMouseLeave={() => shadowFunc("outlined", "third")}>
-                <Avatar variant="square" alt="image" src={Hand} className={classes.avatar} />
-                <Typography className={classes.title} color="textSecondary" gutterBottom>
-                    Mezoterapia
+                </Paper>
+            </Link>
+            <Link to="/uslugi" className={classes.link}>
+                <Paper variant={shadowThird} elevation={6} className={classes.paperCard} onMouseEnter={() => shadowFunc("elevation", "third")} onMouseLeave={() => shadowFunc("outlined", "third")}>
+                    <Avatar variant="square" alt="image" src={Hand} className={classes.avatar} />
+                    <Typography className={classes.title} color="textSecondary" gutterBottom>
+                        Mezoterapia
         </Typography>
-            </Paper>
-
+                </Paper>
+            </Link>
 
         </div>
     );
