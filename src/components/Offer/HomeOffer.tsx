@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme: Theme) =>
             textAlign: "center",
             fontSize: "2.7rem",
             textTransform: "uppercase",
-            margin: "5rem 5rem",
+            margin: "8rem 5rem 0rem 5rem",
             '&::after': {
                 display: "block",
                 width: "50px",
@@ -35,7 +35,7 @@ const useStyles = makeStyles((theme: Theme) =>
             alignItems: "center",
             flexWrap: 'wrap',
             height: "90vh",
-            margin: "5rem 5rem",
+            margin: "2rem 5rem 5rem 5rem",
             '& > *': {
                 margin: theme.spacing(5),
                 width: theme.spacing(28),

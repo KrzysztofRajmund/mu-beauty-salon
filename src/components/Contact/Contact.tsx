@@ -7,12 +7,15 @@ import Avatar from '@material-ui/core/Avatar';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import PhoneIcon from '@material-ui/icons/Phone';
-import PersonPinIcon from '@material-ui/icons/PersonPin';
+import RoomIcon from '@material-ui/icons/Room';
 //assets
 import Hand from "../../assets/hand.png";
 import Face from "../../assets/face.png";
 //router
 import { Link } from "react-router-dom";
+//font-awesome
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faEnvelope, faPhoneVolume, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons'
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -44,41 +47,17 @@ const useStyles = makeStyles((theme: Theme) =>
             content: '""',
 
         },
-        subtitle: {
-            width: "40%",
-            color: "#2b2b2b",
-            textAlign: "center",
-            fontSize: "2rem",
-            margin: "0 auto 5rem auto",
-            [theme.breakpoints.down("sm")]: {
-                width: "60%",
-            }
-        },
-
         cards: {
             display: 'flex',
             justifyContent: "center",
             alignItems: "center",
             flexWrap: 'wrap',
-            height: "70vh",
-            margin: "5rem 5rem",
-            '& > *': {
-                margin: theme.spacing(10),
-                // width: theme.spacing(32),
-                // height: theme.spacing(32),
-            },
-            [theme.breakpoints.down('md')]: {
-                height: "100%",
-                margin: theme.spacing(8),
-            },
-            [theme.breakpoints.down('sm')]: {
-                '& > *': {
-                    margin: theme.spacing(3),
-                    // width: theme.spacing(26),
-                    // height: theme.spacing(26),
-
-                },
-            },
+            height: "100%",
+            width: "40%",
+            margin: "2rem 5rem 5rem 5rem",
+            [theme.breakpoints.down("sm")]: {
+                width: "60%",
+            }
         },
 
         link: {
@@ -91,48 +70,53 @@ const useStyles = makeStyles((theme: Theme) =>
             " &:focus, &:hover, &:visited, &:link, &:active": {
                 textDecoration: "none",
             },
-            [theme.breakpoints.down('md')]: {
-                height: "auto",
-                minWidth: "32rem",
-            },
-
         },
         paperCard: {
-            height: "100%",
+            height: "25rem",
             width: "100%",
             padding: "3rem",
-            backgroundColor: "#f0f7f295",
+            // backgroundColor: "#f0f7f295",
+            backgroundColor: "#f3f9fb",
             display: "flex",
             flexDirection: "column",
             justifyContent: "space-between",
             alignItems: "center",
             transition: "all 3s easy-in-out",
-            border: "2px solid #f0f7f2",
-            // [theme.breakpoints.down('md')]: {
-            //     height: "23rem",
-            //     width: "23rem",
-            // },
+            border: "2px solid #5ea3a336",
         },
-        avatar: {
-            height: "10rem",
-            width: "10rem",
+        avatarIcon: {
+            color: "#2b2b2b",
+            fontSize: "3rem",
             margin: "1.2rem 0 1.5rem 0",
         },
         cardTitle: {
             textAlign: "center",
             fontSize: "2.2rem",
-            minHeight: "5rem",
             margin: "auto 0",
         },
 
         navButtons: {
             width: "40%",
-            margin: "0 auto -5rem auto",
+            fontSize: "2rem",
+            margin: "5rem auto 0rem auto",
+            backgroundColor: "#f3f9fb",
             [theme.breakpoints.down("sm")]: {
                 width: "60%",
-            }
-        }
+            },
+            '& .MuiTabs-indicator': {
+                backgroundColor: "#6eb498",
+                height: "0.3rem",
+            },
+            '& .Mui-selected': {
+                color: "#6eb498",
+            },
+        },
 
+        tab: {
+
+            color: "#000",
+            fontSize: "1rem",
+        },
     }));
 
 const Contact: React.FC = () => {
@@ -184,47 +168,68 @@ const Contact: React.FC = () => {
         </Typography>
                 <span className={classes.span}></span>
             </div>
-            <Typography className={classes.subtitle}>
-                Zadzwoń, umów się online na bezpłatną konsultację lub po prostu odwiedź nas w gabinecie.
-        </Typography>
+
             <div className={classes.cardsContainer}>
                 <Paper square className={classes.navButtons}>
                     <Tabs
                         value={value}
                         onChange={handleChange}
                         variant="fullWidth"
-                        indicatorColor="secondary"
-                        textColor="secondary"
-                        aria-label="icon label tabs example"
+
                     >
-                        <Tab icon={<PhoneIcon />} label="skontaktuj się" onClick={(e) => handleCard(e)} />
-                        <Tab icon={<PersonPinIcon />} label="adres" onClick={(e) => handleCard(e)} />
+                        <Tab className={classes.tab} icon={<PhoneIcon />} label="skontaktuj się" onClick={(e) => handleCard(e)} />
+                        <Tab className={classes.tab} icon={< RoomIcon />} label="adres" onClick={(e) => handleCard(e)} />
                     </Tabs>
                 </Paper>
                 <div className={classes.cards}>
                     {card ? (
-                        <Link to="/zabiegi" className={classes.link}>
-                            <Paper variant={shadowFirst} elevation={6} className={classes.paperCard} onMouseEnter={() => shadowFunc("elevation", "first")} onMouseLeave={() => shadowFunc("outlined", "first")} >
-                                <Avatar variant="square" alt="image" src={Face} className={classes.avatar} />
+
+                        <Paper square variant={shadowFirst} elevation={6} className={classes.paperCard} onMouseEnter={() => shadowFunc("elevation", "first")} onMouseLeave={() => shadowFunc("outlined", "first")} >
+
+                            <a href='mailto:becia848@wp.pl?&subject=Magia Urody&body=Jak możemy pomóc?' className={classes.link}>
+                                <FontAwesomeIcon icon={faEnvelope} className={classes.avatarIcon} />
+
                                 <Typography className={classes.cardTitle} color="textSecondary" gutterBottom>
-                                    Zabiegi na twarz / Makijaż
+                                    becia848@wp.pl
         </Typography>
 
-                            </Paper>
-                        </Link>
+
+                            </a>
+                            <a href="tel:+48-512-301-164" className={classes.link}>
+                                <FontAwesomeIcon icon={faPhoneVolume} className={classes.avatarIcon} />
+
+                                <Typography className={classes.cardTitle} color="textSecondary" gutterBottom>
+                                    +48 512 301 164
+        </Typography>
+
+
+                            </a>
+
+                        </Paper>
+
                     ) : (
-                        <Link to="/zabiegi" className={classes.link}>
-                            <Paper variant={shadowThird} elevation={6} className={classes.paperCard} onMouseEnter={() => shadowFunc("elevation", "third")} onMouseLeave={() => shadowFunc("outlined", "third")}>
-                                <Avatar variant="square" alt="image" src={Hand} className={classes.avatar} />
+                        <Paper variant={shadowFirst} elevation={6} className={classes.paperCard} onMouseEnter={() => shadowFunc("elevation", "first")} onMouseLeave={() => shadowFunc("outlined", "first")} >
+
+                            <a
+                                href='https://www.google.com/maps/dir//53.4492669,14.4967389/@53.440985,14.464491,13z'
+                                target='_blank'
+                                rel="noreferrer"
+                                className={classes.link}
+                            >
+                                <FontAwesomeIcon icon={faMapMarkerAlt} className={classes.avatarIcon} />
+
                                 <Typography className={classes.cardTitle} color="textSecondary" gutterBottom>
-                                    Mezoterapia
-        </Typography>
-                            </Paper>
-                        </Link>
+                                    <h1>
+                                        ul. Klonowica 36/1<br />
+                            71-246<br />
+                            Szczecin<br />
+                                    </h1>
+                                </Typography>
+
+
+                            </a>
+                        </Paper>
                     )}
-
-
-
                 </div>
             </div>
         </React.Fragment>
