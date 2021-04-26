@@ -108,7 +108,7 @@ body {
 .topnav-menu a {
   color: #2b2b2b;
   padding: 0 2.5rem 0 2.5rem;
-  background: linear-gradient(60deg, #f0f7f2 50%, #fff 50%);
+  background: linear-gradient(60deg, #dbf3e2 50%, #fff 50%);
   background-size: 250%;
   background-position: right;
   -webkit-transition: 0.4s ease-out;

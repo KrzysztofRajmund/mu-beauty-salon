@@ -40,7 +40,7 @@ const useStyles = makeStyles((theme: Theme) =>
     title: {
         color: "#fff",
         textAlign: "center",
-        fontSize: "2.5rem",
+        fontSize: "2.7rem",
         textTransform: "uppercase",
         '&::after': {
             display: "block",

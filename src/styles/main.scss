@@ -88,11 +88,7 @@ body {
   a {
     color: $blackFontColor;
     padding: 0 2.5rem 0 2.5rem;
-    background: linear-gradient(
-      60deg,
-      $supplementaryFontColor 50%,
-      $whiteBackground 50%
-    );
+    background: linear-gradient(60deg, #dbf3e2 50%, $whiteBackground 50%);
     background-size: 250%;
     background-position: right;
     transition: 0.4s ease-out;

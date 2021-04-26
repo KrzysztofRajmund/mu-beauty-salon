@@ -11,6 +11,7 @@ import FooterBar from "./FooterBar/FooterBar";
 import HomeJumbotron from './HomeJumbotron/HomeJumbotron';
 import About from './About/About';
 import HomeOffer from './Offer/HomeOffer';
+import Contact from './Contact/Contact';
 const App: React.FC = () => {
   return (
     <Router>
@@ -20,7 +21,7 @@ const App: React.FC = () => {
           <HomeJumbotron />
           <HomeOffer />
           <About />
-
+          <Contact />
         </Route>
       </Switch>
       <FooterBar />
