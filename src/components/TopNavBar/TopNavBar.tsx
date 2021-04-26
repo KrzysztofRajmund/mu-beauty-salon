@@ -35,7 +35,7 @@ const TopNavBar: React.FC = () => {
                 </section>
                 <section className="topnav-menu">
                     <Link to="/onas">O Nas</Link>
-                    <Link to="/oferta">Oferta</Link>
+                    <Link to="/zabiegi">Oferta</Link>
                     <Link to="/galeria">Galeria</Link>
                     <Link to="/kontakt">Kontakt</Link>
                 </section>

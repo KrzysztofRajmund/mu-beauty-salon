@@ -3,16 +3,10 @@ import React, { useState } from 'react';
 import { Theme, createStyles, makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
-import Avatar from '@material-ui/core/Avatar';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import PhoneIcon from '@material-ui/icons/Phone';
 import RoomIcon from '@material-ui/icons/Room';
-//assets
-import Hand from "../../assets/hand.png";
-import Face from "../../assets/face.png";
-//router
-import { Link } from "react-router-dom";
 //font-awesome
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope, faPhoneVolume, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons'
@@ -122,9 +116,6 @@ const useStyles = makeStyles((theme: Theme) =>
 const Contact: React.FC = () => {
     const classes = useStyles();
     const [shadowFirst, setShadowFirst] = useState<any>("outlined")
-    const [shadowSecond, setShadowSecond] = useState<any>("outlined")
-    const [shadowThird, setShadowThird] = useState<any>("outlined")
-
     const [value, setValue] = useState(0);
     const [card, setCard] = useState(true)
 
@@ -146,16 +137,11 @@ const Contact: React.FC = () => {
     }
     console.log(card)
 
-    const shadowFunc = (variantName: string, shadowName: string) => {
-        if (shadowName === "first") {
+    const shadowFunc = (variantName: string) => {
+        if (variantName) {
             setShadowFirst(variantName)
         }
-        if (shadowName === "second") {
-            setShadowSecond(variantName)
-        }
-        if (shadowName === "third") {
-            setShadowThird(variantName)
-        }
+
     }
 
 
@@ -184,7 +170,7 @@ const Contact: React.FC = () => {
                 <div className={classes.cards}>
                     {card ? (
 
-                        <Paper square variant={shadowFirst} elevation={6} className={classes.paperCard} onMouseEnter={() => shadowFunc("elevation", "first")} onMouseLeave={() => shadowFunc("outlined", "first")} >
+                        <Paper square variant={shadowFirst} elevation={6} className={classes.paperCard} onMouseEnter={() => shadowFunc("elevation")} onMouseLeave={() => shadowFunc("outlined")} >
 
                             <a href='mailto:becia848@wp.pl?&subject=Magia Urody&body=Jak możemy pomóc?' className={classes.link}>
                                 <FontAwesomeIcon icon={faEnvelope} className={classes.avatarIcon} />
@@ -208,7 +194,7 @@ const Contact: React.FC = () => {
                         </Paper>
 
                     ) : (
-                        <Paper variant={shadowFirst} elevation={6} className={classes.paperCard} onMouseEnter={() => shadowFunc("elevation", "first")} onMouseLeave={() => shadowFunc("outlined", "first")} >
+                        <Paper variant={shadowFirst} elevation={6} className={classes.paperCard} onMouseEnter={() => shadowFunc("elevation")} onMouseLeave={() => shadowFunc("outlined")} >
 
                             <a
                                 href='https://www.google.com/maps/dir//53.4492669,14.4967389/@53.440985,14.464491,13z'
