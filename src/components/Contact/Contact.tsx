@@ -70,13 +70,13 @@ const useStyles = makeStyles((theme: Theme) =>
             width: "100%",
             padding: "3rem",
             // backgroundColor: "#f0f7f295",
-            backgroundColor: "#f3f9fb",
+            backgroundColor: "#fff",
             display: "flex",
             flexDirection: "column",
             justifyContent: "space-between",
             alignItems: "center",
             transition: "all 3s easy-in-out",
-            border: "2px solid #5ea3a336",
+            // border: "2px solid #5ea3a336",
         },
         avatarIcon: {
             color: "#2b2b2b",
@@ -93,7 +93,7 @@ const useStyles = makeStyles((theme: Theme) =>
             width: "40%",
             fontSize: "2rem",
             margin: "5rem auto 0rem auto",
-            backgroundColor: "#f3f9fb",
+            backgroundColor: "#f0f7f2",
             [theme.breakpoints.down("sm")]: {
                 width: "60%",
             },
@@ -170,7 +170,7 @@ const Contact: React.FC = () => {
                 <div className={classes.cards}>
                     {card ? (
 
-                        <Paper square variant={shadowFirst} elevation={6} className={classes.paperCard} onMouseEnter={() => shadowFunc("elevation")} onMouseLeave={() => shadowFunc("outlined")} >
+                        <Paper square variant={shadowFirst} elevation={6} className={classes.paperCard} onMouseEnter={() => shadowFunc("outlined")} onMouseLeave={() => shadowFunc("elevation")} >
 
                             <a href='mailto:becia848@wp.pl?&subject=Magia Urody&body=Jak możemy pomóc?' className={classes.link}>
                                 <FontAwesomeIcon icon={faEnvelope} className={classes.avatarIcon} />
@@ -194,7 +194,7 @@ const Contact: React.FC = () => {
                         </Paper>
 
                     ) : (
-                        <Paper variant={shadowFirst} elevation={6} className={classes.paperCard} onMouseEnter={() => shadowFunc("elevation")} onMouseLeave={() => shadowFunc("outlined")} >
+                        <Paper variant={shadowFirst} elevation={6} className={classes.paperCard} onMouseEnter={() => shadowFunc("outlined")} onMouseLeave={() => shadowFunc("elevation")} >
 
                             <a
                                 href='https://www.google.com/maps/dir//53.4492669,14.4967389/@53.440985,14.464491,13z'

@@ -34,7 +34,7 @@ const useStyles = makeStyles((theme: Theme) =>
             justifyContent: "center",
             alignItems: "center",
             flexWrap: 'wrap',
-            height: "90vh",
+            height: "70vh",
             margin: "2rem 5rem 5rem 5rem",
             '& > *': {
                 margin: theme.spacing(5),
