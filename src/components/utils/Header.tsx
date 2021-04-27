@@ -13,7 +13,7 @@ const useStyles = makeStyles((theme: Theme) =>
         alignItems: "start",
         height: "60vh",
         width: "100vw",
-        margin: "0 0 5rem 0",
+        margin: "0",
         [theme.breakpoints.down('sm')]: {
             height: "100%",
         },

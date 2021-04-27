@@ -11,6 +11,7 @@ import FooterBar from "./FooterBar/FooterBar";
 import HomeJumbotron from './HomeJumbotron/HomeJumbotron';
 import About from './About/About';
 import HomeOffer from './Offer/HomeOffer';
+import Offer from './Offer/Offer';
 import Contact from './Contact/Contact';
 import Header from './utils/Header';
 const App: React.FC = () => {
@@ -20,6 +21,7 @@ const App: React.FC = () => {
       <Switch>
         <Route path="/zabiegi" >
           <Header />
+          <Offer />
         </Route>
         <Route path="/">
           <HomeJumbotron />
