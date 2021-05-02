@@ -36,7 +36,7 @@ const Offer: React.FC = () => {
                     className='titles-container__menu-fast'
                     onClick={displayFastMenu}
                 >
-                    Otwórz  menu
+                    Otwórz   menu
           </section>
                 <div className='titles-container__menu-nav'>
                     <div className='titles-container__menu-nav-card'>
