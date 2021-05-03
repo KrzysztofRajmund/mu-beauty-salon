@@ -24,9 +24,9 @@ const Offer: React.FC = () => {
             'titles-container__menu-fast'
         )[0];
         targetMenuNav.classList.toggle('active');
-        targetMenuFast.textContent === 'Otwórz szybkie menu'
-            ? (targetMenuFast.textContent = 'Zamknij szybkie menu')
-            : (targetMenuFast.textContent = 'Otwórz szybkie menu');
+        targetMenuFast.textContent === 'Menu'
+            ? (targetMenuFast.textContent = 'Zamknij')
+            : (targetMenuFast.textContent = 'Menu');
     };
     return (
         <React.Fragment>
@@ -36,7 +36,7 @@ const Offer: React.FC = () => {
                     className='titles-container__menu-fast'
                     onClick={displayFastMenu}
                 >
-                    Otwórz   menu
+                    Menu
           </section>
                 <div className='titles-container__menu-nav'>
                     <div className='titles-container__menu-nav-card'>
