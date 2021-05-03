@@ -6,6 +6,9 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 //components
 import DataOffer from "./DataOffer";
+import Header from '../utils/Header';
+//assets
+import ImageHeader from "../../assets/img/offer.jpg";
 
 const Offer: React.FC = () => {
 
@@ -28,8 +31,11 @@ const Offer: React.FC = () => {
             ? (targetMenuFast.textContent = 'Zamknij')
             : (targetMenuFast.textContent = 'Menu');
     };
+    const title = " Nasze zabiegi";
+    const desc = "Przedstawiamy Państwu listę naszych zabiegów wraz z ich cennikiem.";
     return (
         <React.Fragment>
+            <Header image={ImageHeader} title={title} desc={desc} />
             <article className='titles-container titles-container__nav-sticky'>
 
                 <section

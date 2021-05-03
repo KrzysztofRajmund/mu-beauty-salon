@@ -3,8 +3,8 @@ import React from 'react'
 import { Theme, createStyles, makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
-import AboutImage from "../../assets/img/image-about.jpg"
-const useStyles = makeStyles((theme: Theme) =>
+
+const useStyles = makeStyles<Theme, Props>((theme) =>
 ({
 
     root: {
@@ -14,13 +14,13 @@ const useStyles = makeStyles((theme: Theme) =>
         height: "60vh",
         width: "100vw",
         margin: "0",
-        [theme.breakpoints.down('sm')]: {
-            height: "100%",
-        },
+        // [theme.breakpoints.down('sm')]: {
+        //     height: "50vh",
+        // },
 
     },
     paperCard: {
-        backgroundImage: `url(${AboutImage})`,
+        backgroundImage: (props) => (`url(${props.image})`),
         backgroundSize: "cover",
         backgroundPosition: 'center',
         backgroundRepeat: "no-repeat",
@@ -37,9 +37,9 @@ const useStyles = makeStyles((theme: Theme) =>
 
     },
     title: {
-        color: "#fff",
+        color: '#fff',
         textAlign: "center",
-        fontSize: "2.7rem",
+        fontSize: "4rem",
         textTransform: "uppercase",
         '&::after': {
             display: "block",
@@ -54,27 +54,30 @@ const useStyles = makeStyles((theme: Theme) =>
     desc: {
         color: "#fff",
         textAlign: "center",
-        fontSize: "1.8rem",
+        fontSize: "2.5rem",
         padding: "4rem",
     }
 
 }));
-const Header: React.FC = () => {
-    const classes = useStyles();
+
+interface Props {
+    image: string,
+    title: string,
+    desc: string
+}
+
+const Header: React.FC<Props> = ({ ...props }) => {
+    const classes = useStyles(props);
     return (
         <div className={classes.root} >
             <Paper square variant="outlined" className={classes.paperCard}>
 
                 <Typography className={classes.title}>
-                    Zabiegi kosmetyczne dla każdego
-        </Typography>
+                    {props.title}
+                </Typography>
                 <Typography className={classes.desc}>
-                    Magia Urody Beata Gozdek to wyjątkowy salon kosmetyczny na mapie Szczecina. To miejsce, w którym w odpowiedni sposób zadbasz o swoje ciało, jak i umysł.
-                    Przywracamy skórze perfekcyjny wygląd, upiększamy dłonie i stopy, relaksujemy ciało. Usuwamy defekty, przywracamy pewność siebie i zadowolenie z ciała.
-                    Naszym atutem jest zamiłowanie do wykonywanej pracy, którą wykonujemy z pasji a nie
-                    z obowiązku a wszystkie zabiegi wykonywane są na najnowocześniejszym sprzęcie oraz są w 100% bezpieczne dla naszych klientów.
-
-        </Typography>
+                    {props.desc}
+                </Typography>
             </Paper>
 
 

@@ -9,24 +9,30 @@ import {
 import TopNavBar from "./TopNavBar/TopNavBar";
 import FooterBar from "./FooterBar/FooterBar";
 import HomeJumbotron from './HomeJumbotron/HomeJumbotron';
+import AboutShort from './About/AboutShort';
 import About from './About/About';
 import HomeOffer from './Offer/HomeOffer';
 import Offer from './Offer/Offer';
 import Contact from './Contact/Contact';
-import Header from './utils/Header';
+import Gallery from './Gallery/Gallery';
 const App: React.FC = () => {
   return (
     <Router>
       <TopNavBar />
       <Switch>
         <Route path="/zabiegi" >
-          <Header />
           <Offer />
+        </Route>
+        <Route path="/galeria" >
+          <Gallery />
+        </Route>
+        <Route path="/onas" >
+          <About />
         </Route>
         <Route path="/">
           <HomeJumbotron />
           <HomeOffer />
-          <About />
+          <AboutShort />
           <Contact />
         </Route>
       </Switch>

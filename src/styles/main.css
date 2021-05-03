@@ -789,6 +789,132 @@ body {
   color: #73aea5;
 }
 
+.css-0 {
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transform: translateY(-10%);
+          transform: translateY(-10%);
+  background-color: rgba(0, 0, 0, 0.109);
+}
+
+.css-0 span {
+  background-color: #f0f7f2;
+}
+
+.gallery {
+  position: relative;
+  padding: 5rem 4rem 5rem 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.gallery .gallery-image {
+  -webkit-box-flex: 25%;
+      -ms-flex: 25%;
+          flex: 25%;
+  max-width: 25%;
+  padding: 0.2rem;
+  cursor: pointer;
+}
+
+.gallery .gallery-image img {
+  width: 100%;
+  height: 100%;
+}
+
+.modal-container {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: 100;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.503);
+}
+
+.modal-container .modal-image {
+  width: 70vw;
+  margin: 8rem 6rem 8rem 6rem;
+}
+
+.prev-icon,
+.next-icon,
+.x-icon {
+  position: absolute;
+  width: 5rem;
+  height: 5rem;
+  margin: 0.5rem;
+  padding: 1rem;
+}
+
+.prev-icon,
+.next-icon {
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.prev-icon {
+  left: 5%;
+}
+
+.next-icon {
+  right: 5%;
+}
+
+.x-icon {
+  top: 5%;
+  right: 5%;
+}
+
+@media screen and (max-width: 1024px) {
+  .gallery .gallery-image {
+    -webkit-box-flex: 33.33%;
+        -ms-flex: 33.33%;
+            flex: 33.33%;
+    max-width: 33.33%;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .gallery .gallery-image {
+    -webkit-box-flex: 50%;
+        -ms-flex: 50%;
+            flex: 50%;
+    max-width: 50%;
+  }
+}
+
 @media screen and (max-width: 1140px) {
   .titles-container__menu-nav .titles-container__menu-nav-card .titles-container__subtitle {
     font-size: 12px;

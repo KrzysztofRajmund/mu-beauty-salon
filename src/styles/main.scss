@@ -531,7 +531,108 @@ body {
   }
 }
 
-//MEDIA!!!
+//loading
+.css-0 {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(-10%);
+  background-color: rgba(0, 0, 0, 0.109);
+  span {
+    background-color: $supplementaryFontColor;
+  }
+}
+//gallery
+.gallery {
+  position: relative;
+  padding: 5rem 4rem 5rem 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-wrap: wrap;
+  .gallery-image {
+    flex: 25%;
+    max-width: 25%;
+    padding: 0.2rem;
+    cursor: pointer;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+//modal
+.modal-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: 100;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.503);
+
+  .modal-image {
+    width: 70vw;
+    margin: 8rem 6rem 8rem 6rem;
+  }
+}
+
+.prev-icon,
+.next-icon,
+.x-icon {
+  position: absolute;
+  width: 5rem;
+  height: 5rem;
+  margin: 0.5rem;
+  padding: 1rem;
+}
+
+.prev-icon,
+.next-icon {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.prev-icon {
+  left: 5%;
+}
+.next-icon {
+  right: 5%;
+}
+
+.x-icon {
+  top: 5%;
+  right: 5%;
+}
+
+@media screen and (max-width: 1024px) {
+  .gallery {
+    .gallery-image {
+      flex: 33.33%;
+      max-width: 33.33%;
+    }
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .gallery {
+    .gallery-image {
+      flex: 50%;
+      max-width: 50%;
+    }
+  }
+}
+
+//REST OF MEDIA!!!
 @media screen and (max-width: 1140px) {
   //nav menu
   .titles-container__menu-nav {

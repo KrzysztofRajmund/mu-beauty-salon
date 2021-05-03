@@ -5,6 +5,9 @@ import imagesData from "../../imagesData.json";
 //components
 import ModalGallery from './ModalGallery';
 import Loading from '../utils/Loading';
+import Header from '../utils/Header';
+//assets
+import ImageHeader from "../../assets/img/mu-7.jpg";
 
 const Gallery: React.FC = () => {
 
@@ -76,9 +79,12 @@ const Gallery: React.FC = () => {
         }
     }
 
+    const title = "Album";
+    const desc = "Magia Urody na zdjęciach.";
 
     return (
         <React.Fragment>
+            <Header image={ImageHeader} title={title} desc={desc} />
             { loading ? <Loading /> : (
                 <section className="gallery">
 
