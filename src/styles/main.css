@@ -1,4 +1,75 @@
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+.about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100vw;
+  margin: 6rem 0rem;
+  padding: 0rem 4rem 0rem 0rem;
+}
+
+.about .aboutImage {
+  text-align: center;
+  -webkit-box-flex: 35%;
+      -ms-flex: 35%;
+          flex: 35%;
+  padding: 2rem 0rem;
+}
+
+.about .aboutImage img {
+  width: 100%;
+  height: auto;
+}
+
+.about .aboutDesc {
+  -webkit-box-flex: 55%;
+      -ms-flex: 55%;
+          flex: 55%;
+  padding: 2rem 0rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.about .aboutDesc h3 {
+  width: 60%;
+}
+
+@media screen and (max-width: 720px) {
+  .about {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 0rem 4rem;
+  }
+  .about .aboutImage {
+    -webkit-box-flex: 100%;
+        -ms-flex: 100%;
+            flex: 100%;
+    padding: 2rem;
+  }
+  .about .aboutDesc {
+    -webkit-box-flex: 100%;
+        -ms-flex: 100%;
+            flex: 100%;
+    padding: 2rem;
+  }
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;

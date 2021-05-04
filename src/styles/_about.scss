@@ -1,0 +1,46 @@
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  margin: 6rem 0rem;
+  padding: 0rem 4rem 0rem 0rem;
+  .aboutImage {
+    text-align: center;
+    flex: 35%;
+    padding: 2rem 0rem;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .aboutDesc {
+    flex: 55%;
+    padding: 2rem 0rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    h3 {
+      width: 60%;
+    }
+  }
+}
+
+//media
+@media screen and (max-width: 720px) {
+  .about {
+    flex-direction: column;
+    padding: 0rem 4rem;
+    .aboutImage {
+      flex: 100%;
+      padding: 2rem;
+    }
+
+    .aboutDesc {
+      flex: 100%;
+      padding: 2rem;
+    }
+  }
+}
