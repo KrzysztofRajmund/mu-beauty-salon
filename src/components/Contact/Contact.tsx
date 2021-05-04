@@ -11,6 +11,9 @@ import RoomIcon from '@material-ui/icons/Room';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope, faPhoneVolume, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons'
 
+
+const fontJosefin = "'Josefin Sans', sans-serif";
+const fontPoppin = "'Poppins', sans-serif"
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
         titleContainer: {
@@ -26,9 +29,10 @@ const useStyles = makeStyles((theme: Theme) =>
         },
 
         title: {
+            fontFamily: fontJosefin,
             color: "#2b2b2b",
             textAlign: "center",
-            fontSize: "2.7rem",
+            fontSize: "3rem",
             textTransform: "uppercase",
             margin: "5rem 5rem 1.5rem 5rem",
         },
@@ -87,6 +91,7 @@ const useStyles = makeStyles((theme: Theme) =>
             margin: "1.2rem 0 1.5rem 0",
         },
         cardTitle: {
+            fontFamily: fontJosefin,
             textAlign: "center",
             fontSize: "2.2rem",
             margin: "auto 0",
@@ -117,6 +122,8 @@ const useStyles = makeStyles((theme: Theme) =>
 
             color: "#000",
             fontSize: "1rem",
+            fontWeight: 600,
+            fontFamily: fontPoppin,
             [theme.breakpoints.down(375)]: {
                 fontSize: "0rem",
             },

@@ -4,6 +4,9 @@ import { Theme, createStyles, makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 
+
+const fontJosefin = "'Josefin Sans', sans-serif";
+const fontPoppin = "'Poppins', sans-serif"
 const useStyles = makeStyles<Theme, Props>((theme) =>
 ({
 
@@ -37,6 +40,7 @@ const useStyles = makeStyles<Theme, Props>((theme) =>
 
     },
     title: {
+        fontFamily: fontJosefin,
         color: '#fff',
         textAlign: "center",
         fontSize: "4rem",
@@ -54,6 +58,7 @@ const useStyles = makeStyles<Theme, Props>((theme) =>
     },
 
     desc: {
+        fontFamily: fontPoppin,
         color: "#fff",
         textAlign: "center",
         fontSize: "2.5rem",

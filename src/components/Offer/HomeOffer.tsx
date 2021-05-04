@@ -11,12 +11,15 @@ import Face from "../../assets/face.png";
 //router
 import { Link } from "react-router-dom";
 
+const fontJosefin = "'Josefin Sans', sans-serif";
+const fontPoppin = "'Poppins', sans-serif"
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
         title: {
+            fontFamily: fontJosefin,
             color: "#2b2b2b",
             textAlign: "center",
-            fontSize: "2.7rem",
+            fontSize: "3rem",
             textTransform: "uppercase",
             margin: "8rem 5rem 0rem 5rem",
             '&::after': {
@@ -91,6 +94,7 @@ const useStyles = makeStyles((theme: Theme) =>
             margin: "1.2rem 0 1.5rem 0",
         },
         cardTitle: {
+            fontFamily: fontPoppin,
             textAlign: "center",
             fontSize: "2.2rem",
             minHeight: "5rem",
@@ -117,6 +121,11 @@ const HomeOffer: React.FC = () => {
         }
     }
 
+    const scrollTop = () => {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    };
+
     return (
         <React.Fragment>
             <Typography className={classes.title}>
@@ -124,7 +133,7 @@ const HomeOffer: React.FC = () => {
         </Typography>
             <div className={classes.root}>
 
-                <Link to="/zabiegi" className={classes.link}>
+                <Link to="/zabiegi" className={classes.link} onClick={scrollTop}>
                     <Paper variant={shadowFirst} elevation={6} className={classes.paperCard} onMouseEnter={() => shadowFunc("elevation", "first")} onMouseLeave={() => shadowFunc("outlined", "first")} >
                         <Avatar variant="square" alt="image" src={Face} className={classes.avatar} />
                         <Typography className={classes.cardTitle} color="textSecondary" gutterBottom>
@@ -133,7 +142,7 @@ const HomeOffer: React.FC = () => {
 
                     </Paper>
                 </Link>
-                <Link to="/zabiegi" className={classes.link}>
+                <Link to="/zabiegi" className={classes.link} onClick={scrollTop}>
                     <Paper variant={shadowSecond} elevation={6} className={classes.paperCard} onMouseEnter={() => shadowFunc("elevation", "second")} onMouseLeave={() => shadowFunc("outlined", "second")}>
                         <Avatar variant="square" alt="image" src={Legs} className={classes.avatar} />
                         <Typography className={classes.cardTitle} color="textSecondary" gutterBottom>
@@ -141,7 +150,7 @@ const HomeOffer: React.FC = () => {
         </Typography>
                     </Paper>
                 </Link>
-                <Link to="/zabiegi" className={classes.link}>
+                <Link to="/zabiegi" className={classes.link} onClick={scrollTop}>
                     <Paper variant={shadowThird} elevation={6} className={classes.paperCard} onMouseEnter={() => shadowFunc("elevation", "third")} onMouseLeave={() => shadowFunc("outlined", "third")}>
                         <Avatar variant="square" alt="image" src={Hand} className={classes.avatar} />
                         <Typography className={classes.cardTitle} color="textSecondary" gutterBottom>

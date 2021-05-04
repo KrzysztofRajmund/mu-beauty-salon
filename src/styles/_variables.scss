@@ -1,11 +1,14 @@
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&family=Poppins:wght@200&display=swap');
 
 //ICONS
 //<div>Icons made by <a href="https://www.flaticon.com/authors/pixelmeetup" title="Pixelmeetup">Pixelmeetup</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
 
 //FONTS!!!
 //familyfonts
-$familyFont: 'Roboto', sans-serif;
+$familyFonts: 'Roboto', sans-serif;
+$familyFontsSecondary: 'Josefin Sans', sans-serif;
+$familyFontsSupplementary: 'Poppins', sans-serif;
 
 //fonts color
 $blackFontColor: #2b2b2b;

@@ -8,17 +8,22 @@ import Instagram from "../../assets/instagram.png";
 
 const ModalNav: React.FC = () => {
 
+    const scrollTop = () => {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    };
+
     return (
 
         <div className="modalNav">
             <section className="modal-logo">
-                <Link to="/"><img src={Logo} alt="logo" /></Link>
+                <Link to="/" onClick={scrollTop}><img src={Logo} alt="logo" /></Link>
             </section>
             <section className="modal-menu">
-                <Link to="/onas">O Nas</Link>
-                <Link to="/zabiegi">Oferta</Link>
-                <Link to="/galeria">Galeria</Link>
-                <Link to="/kontakt">Kontakt</Link>
+                <Link to="/onas" onClick={scrollTop}>O Nas</Link>
+                <Link to="/zabiegi" onClick={scrollTop}>Oferta</Link>
+                <Link to="/galeria" onClick={scrollTop}>Galeria</Link>
+                <Link to="/kontakt" onClick={scrollTop}>Kontakt</Link>
             </section>
             <section className="modal-socialmedia">
                 <a href="https://www.facebook.com/MagiaUrodyProfesjonalnyGabinetKosmetyczny" target="_blank"><img src={Facebook} alt="facebook" /></a>
