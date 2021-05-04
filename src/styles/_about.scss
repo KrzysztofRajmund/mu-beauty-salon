@@ -30,6 +30,25 @@
   }
 }
 
+//photogrid
+.photogrid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 1rem;
+  article {
+    text-align: center;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  .photogridMiddleImage {
+    padding: 0 1rem;
+  }
+}
+
 //media
 @media screen and (max-width: 720px) {
   .about {
@@ -46,6 +65,28 @@
       text-align: center;
       h3 {
         width: 90%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .photogrid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 1rem;
+    .photogridMiddleImage {
+      display: none;
+    }
+    article {
+      &:last-of-type {
+        padding-left: 0.5rem;
+      }
+
+      &:first-of-type {
+        padding-right: 0.5rem;
       }
     }
   }

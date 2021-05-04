@@ -17,9 +17,9 @@ const useStyles = makeStyles<Theme, Props>((theme) =>
         height: "60vh",
         width: "100vw",
         margin: "0",
-        // [theme.breakpoints.down('sm')]: {
-        //     height: "50vh",
-        // },
+        [theme.breakpoints.down(450)]: {
+            height: "100%",
+        },
 
     },
     paperCard: {

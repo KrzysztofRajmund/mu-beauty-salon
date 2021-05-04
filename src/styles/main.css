@@ -51,6 +51,33 @@
   font-family: "Josefin Sans", sans-serif;
 }
 
+.photogrid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.photogrid article {
+  text-align: center;
+}
+
+.photogrid article img {
+  width: 100%;
+  height: auto;
+}
+
+.photogrid .photogridMiddleImage {
+  padding: 0 1rem;
+}
+
 @media screen and (max-width: 720px) {
   .about {
     -webkit-box-orient: vertical;
@@ -74,6 +101,31 @@
   }
   .about .aboutDesc h3 {
     width: 90%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .photogrid {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    margin-top: 1rem;
+  }
+  .photogrid .photogridMiddleImage {
+    display: none;
+  }
+  .photogrid article:last-of-type {
+    padding-left: 0.5rem;
+  }
+  .photogrid article:first-of-type {
+    padding-right: 0.5rem;
   }
 }
 
@@ -341,7 +393,8 @@ body {
 
 .topnav-menu a {
   color: #2b2b2b;
-  padding: 0 2.5rem 0 2.5rem;
+  padding: 0.7rem 2.5rem 0.7rem 2.5rem;
+  margin: 1.2rem;
   background: linear-gradient(60deg, #dbf3e2 50%, #fff 50%);
   background-size: 250%;
   background-position: right;
@@ -877,7 +930,7 @@ body {
   text-transform: uppercase;
   letter-spacing: 0.09em;
   font-size: 18px;
-  min-width: 300px;
+  min-width: 280px;
   padding: 10px;
   border: 2px solid #2b2b2b;
 }
@@ -912,7 +965,7 @@ body {
   width: 100%;
   position: -webkit-sticky;
   position: sticky;
-  top: 0;
+  top: 70px;
   background-color: #fff;
   z-index: 90;
 }
@@ -957,7 +1010,7 @@ body {
 
 .titles-container__menu-nav .titles-container__menu-nav-card .titles-container__subtitle a {
   color: #2b2b2b;
-  padding: 0 2.5rem 0 2.5rem;
+  padding: 0.7rem 2.5rem 0.7rem 2.5rem;
   background: linear-gradient(60deg, #dbf3e2 50%, #fff 50%);
   background-size: 250%;
   background-position: right;
@@ -970,11 +1023,6 @@ body {
   color: #fff;
   text-decoration: none;
   cursor: pointer;
-}
-
-.titles-container__menu-nav .titles-container__menu-nav-card .titles-container__subtitle .active {
-  border-bottom: 2px solid #73aea59a;
-  color: #73aea5;
 }
 
 .css-0 {
@@ -1135,6 +1183,9 @@ body {
   }
   .titles-container__menu-nav .titles-container__menu-nav-card .titles-container__subtitle {
     min-width: 120px;
+  }
+  .topnav-menu a {
+    margin: 0;
   }
 }
 

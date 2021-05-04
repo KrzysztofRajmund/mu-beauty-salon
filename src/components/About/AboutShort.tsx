@@ -4,7 +4,8 @@ import { Theme, createStyles, makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import AboutImage from "../../assets/img/image-about3.jpg"
-
+//components
+import PhotoGrid from "./PhotoGrid";
 const fontJosefin = "'Josefin Sans', sans-serif";
 const fontPoppin = "'Poppins', sans-serif"
 const useStyles = makeStyles((theme: Theme) =>
@@ -12,10 +13,11 @@ const useStyles = makeStyles((theme: Theme) =>
 
     root: {
         display: 'flex',
+        flexDirection: "column",
         justifyContent: "center",
         alignItems: "center",
-        height: "90vh",
-        margin: "5rem 5rem",
+        height: "150vh",
+        margin: "0 0 3rem 0",
         [theme.breakpoints.down('sm')]: {
             height: "100%",
         },
@@ -87,7 +89,7 @@ const AboutShort: React.FC = () => {
         </Typography>
             </Paper>
 
-
+            <PhotoGrid />
         </div>
     )
 }

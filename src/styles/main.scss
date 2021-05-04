@@ -88,7 +88,8 @@ body {
   text-align: center;
   a {
     color: $blackFontColor;
-    padding: 0 2.5rem 0 2.5rem;
+    padding: 0.7rem 2.5rem 0.7rem 2.5rem;
+    margin: 1.2rem;
     background: linear-gradient(60deg, #dbf3e2 50%, $whiteBackground 50%);
     background-size: 250%;
     background-position: right;
@@ -420,7 +421,7 @@ body {
   text-transform: uppercase;
   letter-spacing: 0.09em;
   font-size: 18px;
-  min-width: 300px;
+  min-width: 280px;
   padding: 10px;
   border: 2px solid $blackFontColor;
 }
@@ -445,7 +446,7 @@ body {
   padding: 30px 10px;
   width: 100%;
   position: sticky;
-  top: 0;
+  top: 70px;
   background-color: $whiteBackground;
   z-index: 90;
 }
@@ -470,7 +471,7 @@ body {
 
       a {
         color: $blackFontColor;
-        padding: 0 2.5rem 0 2.5rem;
+        padding: 0.7rem 2.5rem 0.7rem 2.5rem;
         background: linear-gradient(60deg, #dbf3e2 50%, $whiteBackground 50%);
         background-size: 250%;
         background-position: right;
@@ -482,10 +483,10 @@ body {
           cursor: pointer;
         }
       }
-      .active {
-        border-bottom: 2px solid #73aea59a;
-        color: #73aea5;
-      }
+      // .active {
+      //   border-bottom: 2px solid #73aea59a;
+      //   color: #73aea5;
+      // }
     }
   }
 }
@@ -622,6 +623,12 @@ body {
       .titles-container__subtitle {
         min-width: 120px;
       }
+    }
+  }
+
+  .topnav-menu {
+    a {
+      margin: 0;
     }
   }
 }
