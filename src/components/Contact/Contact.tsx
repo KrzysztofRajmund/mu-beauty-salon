@@ -48,7 +48,7 @@ const useStyles = makeStyles((theme: Theme) =>
             flexWrap: 'wrap',
             height: "100%",
             width: "40%",
-            margin: "2rem 5rem 5rem 5rem",
+            margin: "0rem 0rem 5rem 0rem",
             [theme.breakpoints.down("sm")]: {
                 width: "60%",
             }
@@ -77,6 +77,9 @@ const useStyles = makeStyles((theme: Theme) =>
             alignItems: "center",
             transition: "all 3s easy-in-out",
             // border: "2px solid #5ea3a336",
+            [theme.breakpoints.down(375)]: {
+                padding: "3rem 0rem",
+            }
         },
         avatarIcon: {
             color: "#2b2b2b",
@@ -87,22 +90,26 @@ const useStyles = makeStyles((theme: Theme) =>
             textAlign: "center",
             fontSize: "2.2rem",
             margin: "auto 0",
+            [theme.breakpoints.down(375)]: {
+                fontSize: "1.8rem",
+            }
         },
 
         navButtons: {
             width: "40%",
             fontSize: "2rem",
             margin: "5rem auto 0rem auto",
-            backgroundColor: "#f0f7f2",
+            // backgroundColor: "#f0f7f2",
             [theme.breakpoints.down("sm")]: {
                 width: "60%",
             },
             '& .MuiTabs-indicator': {
-                backgroundColor: "#6eb498",
+                // backgroundColor: "#6eb498",
+                backgroundColor: "#2b2b2b",
                 height: "0.3rem",
             },
             '& .Mui-selected': {
-                color: "#6eb498",
+                color: "#2b2b2b",
             },
         },
 
@@ -110,6 +117,9 @@ const useStyles = makeStyles((theme: Theme) =>
 
             color: "#000",
             fontSize: "1rem",
+            [theme.breakpoints.down(375)]: {
+                fontSize: "0rem",
+            },
         },
     }));
 
@@ -170,7 +180,7 @@ const Contact: React.FC = () => {
                 <div className={classes.cards}>
                     {card ? (
 
-                        <Paper square variant={shadowFirst} elevation={6} className={classes.paperCard} onMouseEnter={() => shadowFunc("outlined")} onMouseLeave={() => shadowFunc("elevation")} >
+                        <Paper square variant={shadowFirst} elevation={6} className={classes.paperCard} onMouseEnter={() => shadowFunc("elevation")} onMouseLeave={() => shadowFunc("outlined")} >
 
                             <a href='mailto:becia848@wp.pl?&subject=Magia Urody&body=Jak możemy pomóc?' className={classes.link}>
                                 <FontAwesomeIcon icon={faEnvelope} className={classes.avatarIcon} />
@@ -194,7 +204,7 @@ const Contact: React.FC = () => {
                         </Paper>
 
                     ) : (
-                        <Paper variant={shadowFirst} elevation={6} className={classes.paperCard} onMouseEnter={() => shadowFunc("outlined")} onMouseLeave={() => shadowFunc("elevation")} >
+                        <Paper variant={shadowFirst} elevation={6} className={classes.paperCard} onMouseEnter={() => shadowFunc("elevation")} onMouseLeave={() => shadowFunc("outlined")} >
 
                             <a
                                 href='https://www.google.com/maps/dir//53.4492669,14.4967389/@53.440985,14.464491,13z'
@@ -204,8 +214,8 @@ const Contact: React.FC = () => {
                             >
                                 <FontAwesomeIcon icon={faMapMarkerAlt} className={classes.avatarIcon} />
 
-                                <Typography className={classes.cardTitle} color="textSecondary" gutterBottom>
-                                    <h1>
+                                <Typography color="textSecondary" gutterBottom>
+                                    <h1 className={classes.cardTitle}>
                                         ul. Klonowica 36/1<br />
                             71-246<br />
                             Szczecin<br />

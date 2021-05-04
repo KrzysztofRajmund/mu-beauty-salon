@@ -29,6 +29,9 @@ const App: React.FC = () => {
         <Route path="/onas" >
           <About />
         </Route>
+        <Route path="/kontakt" >
+          <Contact />
+        </Route>
         <Route path="/">
           <HomeJumbotron />
           <HomeOffer />

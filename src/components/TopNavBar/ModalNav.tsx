@@ -21,8 +21,8 @@ const ModalNav: React.FC = () => {
                 <Link to="/kontakt">Kontakt</Link>
             </section>
             <section className="modal-socialmedia">
-                <Link to="/"><img src={Facebook} alt="facebook" /></Link>
-                <Link to="/"><img src={Instagram} alt="instagram" /></Link>
+                <a href="https://www.facebook.com/MagiaUrodyProfesjonalnyGabinetKosmetyczny" target="_blank"><img src={Facebook} alt="facebook" /></a>
+                <a href="https://www.instagram.com/magiaurodyszczecin/" target="_blank"><img src={Instagram} alt="instagram" /></a>
             </section>
         </div>
 

@@ -13,7 +13,7 @@ const HomeJumbotron: React.FC = () => {
                         alt="First slide"
                     />
                     <Carousel.Caption>
-                        <h1>First slide label</h1>
+                        <h1>Mezoterapia</h1>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
@@ -23,7 +23,7 @@ const HomeJumbotron: React.FC = () => {
                         alt="First slide"
                     />
                     <Carousel.Caption>
-                        <h1>First slide label</h1>
+                        <h1>Zabiegi na twarz</h1>
                     </Carousel.Caption>
                 </Carousel.Item>
             </Carousel>

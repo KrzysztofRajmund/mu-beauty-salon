@@ -41,15 +41,22 @@ const useStyles = makeStyles((theme: Theme) =>
                 width: theme.spacing(28),
                 height: theme.spacing(28),
             },
+            [theme.breakpoints.down('md')]: {
+                height: "100%",
+            },
             [theme.breakpoints.down('sm')]: {
                 '& > *': {
                     width: theme.spacing(26),
                     height: theme.spacing(26),
+                    margin: theme.spacing(3),
 
                 },
             },
-            [theme.breakpoints.down('md')]: {
-                height: "100%",
+            [theme.breakpoints.down(360)]: {
+                '& > *': {
+                    margin: theme.spacing(1),
+
+                },
             },
         },
 

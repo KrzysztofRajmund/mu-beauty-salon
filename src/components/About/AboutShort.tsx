@@ -18,6 +18,9 @@ const useStyles = makeStyles((theme: Theme) =>
         [theme.breakpoints.down('sm')]: {
             height: "100%",
         },
+        [theme.breakpoints.down(360)]: {
+            margin: "5rem 2rem",
+        },
 
     },
     paperCard: {
@@ -57,6 +60,9 @@ const useStyles = makeStyles((theme: Theme) =>
         textAlign: "center",
         fontSize: "1.8rem",
         padding: "4rem",
+        [theme.breakpoints.down("sm")]: {
+            padding: "1rem",
+        }
     }
 
 }));

@@ -99,29 +99,26 @@
         "category": "galeria",
         "url":"mu-19.jpg"
     },
-           {
-        "id":21,
-        "category": "",
-        "url":"mu-20.jpg"
-    },
+
        {
-        "id":22,
+        "id":21,
         "category": "",
         "url":"mu-21.jpg"
     },
        {
-        "id":23,
+        "id":22,
         "category": "",
         "url":"mu-22.jpg"
     },
+  
        {
-        "id":24,
-        "category": "",
-        "url":"mu-23.jpg"
-    },
-       {
-        "id":25,
+        "id":23,
         "category": "",
         "url":"mu-24.jpg"
+    },
+               {
+        "id":24,
+        "category": "",
+        "url":"mu-20.jpg"
     }
 ]}

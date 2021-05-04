@@ -4,7 +4,7 @@
 @import 'variables';
 @import 'functions';
 @import 'about';
-
+@import 'homejumbotron';
 * {
   box-sizing: border-box;
   font-family: $familyFont;
@@ -61,7 +61,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: $subtitleFontSize;
+  font-size: $subtitleFontSize * 5/6;
   letter-spacing: 0.2rem;
   font-weight: 600;
   text-transform: uppercase;
@@ -351,48 +351,6 @@ body {
   }
 }
 
-//home-jumbotron
-.carousel {
-  margin-top: -18rem;
-  .carousel-item {
-    .carousel-caption {
-      margin: 0 auto;
-      margin-bottom: 25%;
-      width: 30%;
-      height: 7rem;
-      padding: 1.5rem;
-      text-transform: uppercase;
-      background-color: rgba(0, 0, 0, 0.381);
-      h1 {
-        margin: 0;
-        padding: 0.5rem 0 0 0;
-      }
-    }
-  }
-
-  .carousel-indicators {
-    margin-bottom: 18%;
-    li {
-      height: 1rem;
-      width: 4rem;
-      background-color: pink;
-      padding: 0;
-      border-bottom: 0.1rem solid $whiteBackground;
-    }
-  }
-  .carousel-control-prev,
-  .carousel-control-next {
-    width: 10%;
-    .carousel-control-prev-icon,
-    .carousel-control-next-icon {
-      background-color: pink;
-      width: 80%;
-      height: 10rem;
-      background-size: 3rem;
-    }
-  }
-}
-
 //footer
 .footer {
   width: 100vw;
@@ -635,7 +593,17 @@ body {
 
 //REST OF MEDIA!!!
 @media screen and (max-width: 1140px) {
-  //nav menu
+  .topnav-container {
+    font-size: $subtitleFontSize * 2/3;
+  }
+  .topnav-logo {
+    margin-left: 0rem;
+  }
+
+  .topnav-socialmedia {
+    flex: 12%;
+    margin-right: 0rem;
+  }
   .titles-container__menu-nav {
     .titles-container__menu-nav-card {
       .titles-container__subtitle {
@@ -658,16 +626,7 @@ body {
   }
 }
 
-@media screen and (max-width: 940px) {
-  .topnav-container {
-    font-size: $subtitleFontSize * 3/4;
-  }
-}
-
 @media screen and (max-width: 825px) {
-  .topnav-logo {
-    margin-left: 0;
-  }
   .topnav-menu {
     display: none;
   }
