@@ -21,7 +21,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
+    text-align: left;
     h3 {
       width: 60%;
     }
@@ -41,6 +41,10 @@
     .aboutDesc {
       flex: 100%;
       padding: 2rem;
+      text-align: center;
+      h3 {
+        width: 90%;
+      }
     }
   }
 }
