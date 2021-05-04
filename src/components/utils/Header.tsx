@@ -41,6 +41,8 @@ const useStyles = makeStyles<Theme, Props>((theme) =>
         textAlign: "center",
         fontSize: "4rem",
         textTransform: "uppercase",
+        // backgroundColor: "rgba(0, 0, 0, 0.381)",
+        // padding: "1rem 2rem",
         '&::after': {
             display: "block",
             width: "50px",
@@ -56,6 +58,9 @@ const useStyles = makeStyles<Theme, Props>((theme) =>
         textAlign: "center",
         fontSize: "2.5rem",
         padding: "4rem",
+        // padding: "1rem 2rem",
+        // marginTop: "4rem",
+        // backgroundColor: "rgba(0, 0, 0, 0.381)",
     }
 
 }));
