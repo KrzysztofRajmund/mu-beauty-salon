@@ -147,7 +147,7 @@
   margin: 0 auto;
   margin-bottom: 25%;
   width: 32%;
-  height: 7rem;
+  height: 8rem;
   padding: 1.5rem;
   text-transform: uppercase;
   background-color: rgba(255, 255, 255, 0.673);
@@ -157,7 +157,7 @@
 .carousel .carousel-item .carousel-caption h1 {
   margin: 0;
   letter-spacing: 1.2rem;
-  line-height: 1.7rem;
+  line-height: 3rem;
   font-family: "Josefin Sans", sans-serif;
 }
 
@@ -229,10 +229,11 @@
 @media screen and (max-width: 725px) {
   .carousel .carousel-item .carousel-caption {
     width: 50%;
-    height: 5rem;
+    height: 6rem;
   }
   .carousel .carousel-item .carousel-caption h1 {
     font-size: 1.4rem;
+    line-height: 2.5rem;
   }
   .carousel .carousel-control-prev .carousel-control-prev-icon,
   .carousel .carousel-control-prev .carousel-control-next-icon,
