@@ -15,7 +15,7 @@ const HomeJumbotron: React.FC = () => {
                         alt="First slide"
                     />
                     <Carousel.Caption>
-                        <h1>Makijaż stały</h1>
+                        <h1>Makijaż permanentny</h1>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
